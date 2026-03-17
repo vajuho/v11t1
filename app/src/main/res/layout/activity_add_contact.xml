@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<EditText
+    android:id="@+id/FirstNameEdit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="101dp"
+    android:layout_marginTop="48dp"
+    android:layout_marginEnd="100dp"
+    android:layout_marginBottom="18dp"
+    android:ems="10"
+    android:hint="Etunimi"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/LastNameEdit"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/LastNameEdit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="101dp"
+    android:layout_marginBottom="19dp"
+    android:ems="10"
+    android:hint="Sukunimi"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/PhoneNumberEdit"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/FirstNameEdit" />
+
+<EditText
+    android:id="@+id/PhoneNumberEdit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="101dp"
+    android:layout_marginBottom="17dp"
+    android:ems="10"
+    android:hint="Puhelinnumero"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/ContactTypeRadioGroup"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/LastNameEdit" />
+
+<RadioGroup
+    android:id="@+id/ContactTypeRadioGroup"
+    android:layout_width="181dp"
+    android:layout_height="97dp"
+    android:layout_marginStart="115dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="115dp"
+    android:layout_marginBottom="383dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/PhoneNumberEdit">
+
+    <RadioButton
+        android:id="@+id/PersonalRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Henkilökohtainen" />
+
+    <RadioButton
+        android:id="@+id/WorkRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Työt" />
+</RadioGroup>
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="53dp"
+    android:layout_height="21dp"
+    android:layout_marginStart="168dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="191dp"
+    android:layout_marginBottom="12dp"
+    android:text="Ryhmä:"
+    app:layout_constraintBottom_toTopOf="@+id/ContactTypeRadioGroup"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/PhoneNumberEdit" />
+
+    <Button
+        android:id="@+id/AddContactButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="addContact"
+        android:text="Lisää yhteystieto"
+        app:layout_constraintBottom_toTopOf="@+id/goToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ContactTypeRadioGroup" />
+
+    <Button
+        android:id="@+id/goToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="goBack"
+        android:text="Palaa takaisin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddContactButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
