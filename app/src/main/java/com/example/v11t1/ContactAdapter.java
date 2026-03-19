@@ -30,6 +30,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactViewHolder> {
         holder.ContactNameText.setText(contacts.get(position).getFullName());
         holder.ContactNumberText.setText(contacts.get(position).getNumber());
         holder.ContactGroupText.setText(contacts.get(position).getContactGroup());
+        holder.imageView.setImageResource(R.drawable.photo_contact);
 
         holder.ContactNumberText.setVisibility(View.GONE);
         holder.ContactGroupText.setVisibility(View.GONE);
